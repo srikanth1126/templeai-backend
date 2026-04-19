@@ -1,0 +1,274 @@
+{
+  "feature_cols": [
+    "day_of_week",
+    "is_weekend",
+    "month",
+    "day_of_year",
+    "festival_flag",
+    "festival_weight",
+    "festival_tier",
+    "is_extraordinary",
+    "is_school_holiday",
+    "is_pournami",
+    "is_pradosham",
+    "cross_temple_effect",
+    "google_trends",
+    "parking_count",
+    "annadhanam_count",
+    "prasadam_volume",
+    "mobile_congestion",
+    "tnstc_bus_ratio",
+    "weather_score",
+    "temple_base",
+    "temple_fest_mult",
+    "highway_boost"
+  ],
+  "performance": {
+    "RandomForest": {
+      "mae": 597.4,
+      "r2": 0.9958,
+      "mape": 2.95
+    },
+    "GradientBoosting": {
+      "mae": 614.0,
+      "r2": 0.9943,
+      "mape": 2.95
+    },
+    "Ridge": {
+      "mae": 604.9,
+      "r2": 0.9957,
+      "mape": 3.12
+    },
+    "Ensemble": {
+      "mae": 578.8,
+      "r2": 0.996,
+      "mape": 2.86
+    },
+    "mape_by_type": {
+      "Ordinary": 2.79,
+      "Medium Festival": 3.76,
+      "Major Festival": 4.33
+    },
+    "baseline_comparison": {
+      "baseline_mape": 28.5,
+      "model_mape": 2.86,
+      "improvement_pct": 25.64
+    }
+  },
+  "feature_importance": {
+    "day_of_week": 0.00013550952330777252,
+    "is_weekend": 1.0528896698127875e-05,
+    "month": 0.00013522378413163266,
+    "day_of_year": 0.00024596454980547485,
+    "festival_flag": 1.106205502016012e-06,
+    "festival_weight": 0.0001391815716173533,
+    "festival_tier": 1.1691676954058968e-05,
+    "is_extraordinary": 2.019126578149431e-07,
+    "is_school_holiday": 9.059538500517177e-05,
+    "is_pournami": 1.8107628344671654e-05,
+    "is_pradosham": 2.2754638856815505e-05,
+    "cross_temple_effect": 0.0,
+    "google_trends": 0.0003820128550729331,
+    "parking_count": 0.9603938341660379,
+    "annadhanam_count": 0.0031718260763303574,
+    "prasadam_volume": 0.03463281975783359,
+    "mobile_congestion": 0.00013077798586644368,
+    "tnstc_bus_ratio": 2.8986067285031872e-05,
+    "weather_score": 0.00025874455624920977,
+    "temple_base": 6.0613996407437717e-05,
+    "temple_fest_mult": 7.067131168808863e-05,
+    "highway_boost": 5.8847454347922154e-05
+  },
+  "prasadam_simulation": {
+    "baseline": {
+      "avg_waste_kg": 274.06,
+      "avg_shortfall_kg": 87.92,
+      "cost_inr": 21924.93
+    },
+    "model": {
+      "avg_waste_kg": 18.63,
+      "avg_shortfall_kg": 28.59,
+      "cost_inr": 1490.2
+    },
+    "improvement": {
+      "waste_reduction_pct": 93.2,
+      "shortfall_reduction_pct": 67.5,
+      "annual_saving_inr": 7458675.0
+    }
+  },
+  "festival_calendar": {
+    "1-14": [
+      "Pongal",
+      1.0,
+      "High",
+      false
+    ],
+    "1-15": [
+      "Mattu Pongal",
+      0.75,
+      "Medium",
+      false
+    ],
+    "1-16": [
+      "Kaanum Pongal",
+      0.65,
+      "Medium",
+      false
+    ],
+    "2-18": [
+      "Maha Shivaratri",
+      0.9,
+      "High",
+      false
+    ],
+    "2-22": [
+      "Mahamaham",
+      1.0,
+      "Extraordinary",
+      true
+    ],
+    "3-8": [
+      "Panguni Uthiram",
+      0.8,
+      "High",
+      false
+    ],
+    "4-13": [
+      "Pre-Puthandu",
+      0.6,
+      "Medium",
+      false
+    ],
+    "4-14": [
+      "Tamil Puthandu",
+      1.0,
+      "High",
+      false
+    ],
+    "4-23": [
+      "Akshaya Tritiya",
+      0.85,
+      "High",
+      false
+    ],
+    "5-3": [
+      "Shanmukha Sashti",
+      0.7,
+      "Medium",
+      false
+    ],
+    "6-15": [
+      "Vaikasi Visakam",
+      0.88,
+      "High",
+      false
+    ],
+    "7-17": [
+      "Adi Perukku",
+      0.72,
+      "Medium",
+      false
+    ],
+    "8-20": [
+      "Varalakshmi Vratham",
+      0.78,
+      "Medium",
+      false
+    ],
+    "8-30": [
+      "Krishna Jayanthi",
+      0.82,
+      "High",
+      false
+    ],
+    "9-2": [
+      "Vinayagar Chaturthi",
+      0.93,
+      "High",
+      false
+    ],
+    "9-29": [
+      "Navratri Start",
+      0.7,
+      "Medium",
+      false
+    ],
+    "10-8": [
+      "Saraswati Puja",
+      0.75,
+      "Medium",
+      false
+    ],
+    "10-9": [
+      "Vijayadasami",
+      0.88,
+      "High",
+      false
+    ],
+    "10-24": [
+      "Diwali",
+      0.85,
+      "High",
+      false
+    ],
+    "11-27": [
+      "Karthigai Deepam",
+      0.95,
+      "High",
+      false
+    ],
+    "12-16": [
+      "Margazhi Start",
+      0.65,
+      "Medium",
+      false
+    ],
+    "12-30": [
+      "Vaikunta Ekadasi",
+      0.97,
+      "High",
+      false
+    ]
+  },
+  "temple_configs": {
+    "1": {
+      "name": "Meenakshi Amman Temple",
+      "city": "Madurai",
+      "base": 15000,
+      "fest_mult": 4.2,
+      "highway_boost": 1.15
+    },
+    "2": {
+      "name": "Brihadeeswarar Temple",
+      "city": "Thanjavur",
+      "base": 8000,
+      "fest_mult": 3.5,
+      "highway_boost": 1.08
+    },
+    "3": {
+      "name": "Kapaleeshwarar Temple",
+      "city": "Chennai",
+      "base": 10000,
+      "fest_mult": 3.8,
+      "highway_boost": 1.2
+    },
+    "4": {
+      "name": "Dhandayuthapani Temple",
+      "city": "Palani",
+      "base": 12000,
+      "fest_mult": 4.5,
+      "highway_boost": 1.12
+    },
+    "5": {
+      "name": "Ramanathaswamy Temple",
+      "city": "Rameswaram",
+      "base": 9000,
+      "fest_mult": 3.9,
+      "highway_boost": 1.1
+    }
+  },
+  "trained_at": "2026-04-19T08:38:13.170652",
+  "version": "3.0.0",
+  "total_features": 22,
+  "data_note": "Synthetic \u2014 approved per TNSDC PS09 Section 13"
+}
