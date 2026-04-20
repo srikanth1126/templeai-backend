@@ -30,7 +30,7 @@ from datetime import datetime, timedelta
 import random
 
 app = Flask(__name__)
-CORS(app)  # Allow React frontend on localhost:3000
+CORS(app, resources={r"/api/*": {"origins": "*"}})  # Allow React frontend on localhost:3000
 
 # ─────────────────────────────────────────────
 # LOAD MODEL ARTIFACTS
