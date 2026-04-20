@@ -93,9 +93,11 @@ FESTIVAL_CALENDAR = {
 
 FEATURE_COLS = [
     "day_of_week", "is_weekend", "month", "day_of_year",
-    "festival_flag", "festival_weight",
-    "google_trends", "parking_count", "weather_score",
-    "temple_base", "temple_fest_mult"
+    "festival_flag", "festival_weight", "festival_tier", "is_extraordinary",
+    "is_school_holiday", "is_pournami", "is_pradosham", "cross_temple_effect",
+    "google_trends", "parking_count", "annadhanam_count", "prasadam_volume",
+    "mobile_congestion", "tnstc_bus_ratio", "weather_score",
+    "temple_base", "temple_fest_mult", "highway_boost",
 ]
 
 # ─────────────────────────────────────────────
