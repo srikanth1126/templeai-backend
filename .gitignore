@@ -1,1 +1,2 @@
-echo model_artifacts/ > .gitignore
+__pycache__/
+*.pyc
