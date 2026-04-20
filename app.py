@@ -42,6 +42,11 @@ rf_model = gb_model = ridge_model = scaler = meta = None
 def load_models():
     global rf_model, gb_model, ridge_model, scaler, meta, MODELS_LOADED
     try:
+        if not os.path.exists(f"{MODEL_DIR}/rf_model.pkl"):
+            print("⚠️ Model files missing — retraining automatically...")
+            import subprocess
+            subprocess.run(["python", "train_model.py"], check=True)
+            print("✅ Retraining complete")
         rf_model    = joblib.load(f"{MODEL_DIR}/rf_model.pkl")
         gb_model    = joblib.load(f"{MODEL_DIR}/gb_model.pkl")
         ridge_model = joblib.load(f"{MODEL_DIR}/ridge_model.pkl")
@@ -51,7 +56,7 @@ def load_models():
         MODELS_LOADED = True
         print("✅ ML Models loaded successfully")
     except Exception as e:
-        print(f"⚠️  Models not found — using fallback predictions. Run train_model.py first.")
+        print(f"⚠️ Model loading failed: {e}")
         MODELS_LOADED = False
 
 load_models()
